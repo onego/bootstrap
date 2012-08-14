@@ -11,22 +11,22 @@
 // Grays
 // -------------------------
 @black:                 #000;
-@grayDarker:            #222;
-@grayDark:              #333;
-@gray:                  #555;
-@grayLight:             #999;
-@grayLighter:           #eee;
+@grayDarker:            #999999;
+@grayDark:              #9B9B9B;
+@gray:                  #A3A3A3;
+@grayLight:             #CBC7C7;
+@grayLighter:           #F4F4F4;
 @white:                 #fff;
 
 
 // Accent colors
 // -------------------------
-@blue:                  #049cdb;
-@blueDark:              #0064cd;
-@green:                 #46a546;
-@red:                   #9d261d;
+@blue:                  #F0F9FF;
+@blueDark:              #288BD3; 
+@green:                 #7FB003;
+@red:                   #BC422C;
 @yellow:                #ffc40d;
-@orange:                #f89406;
+@orange:                #FF6905;
 @pink:                  #c3325f;
 @purple:                #7a43b6;
 
@@ -39,7 +39,7 @@
 
 // Links
 // -------------------------
-@linkColor:             #08c;
+@linkColor:             @orange;
 @linkColorHover:        darken(@linkColor, 15%);
 
 
@@ -104,9 +104,9 @@
 // -------------------------
 @dropdownBackground:            @white;
 @dropdownBorder:                rgba(0,0,0,.2);
-@dropdownLinkColor:             @grayDark;
-@dropdownLinkColorHover:        @white;
-@dropdownLinkBackgroundHover:   @linkColor;
+@dropdownLinkColor:             @black;
+@dropdownLinkColorHover:        @orange;
+@dropdownLinkBackgroundHover:   @grayLighter;
 @dropdownDividerTop:            #e5e5e5;
 @dropdownDividerBottom:         @white;
 
@@ -146,21 +146,21 @@
 // Navbar
 // -------------------------
 @navbarHeight:                    40px;
-@navbarBackground:                @grayDarker;
-@navbarBackgroundHighlight:       @grayDark;
+@navbarBackground:                @black;
+@navbarBackgroundHighlight:       @black;
 
-@navbarText:                      @grayLight;
-@navbarLinkColor:                 @grayLight;
-@navbarLinkColorHover:            @white;
+@navbarText:                      @white;
+@navbarLinkColor:                 @white;
+@navbarLinkColorHover:            @orange;
 @navbarLinkColorActive:           @navbarLinkColorHover;
 @navbarLinkBackgroundHover:       transparent;
 @navbarLinkBackgroundActive:      @navbarBackground;
 
-@navbarSearchBackground:          lighten(@navbarBackground, 25%);
+@navbarSearchBackground:          lighten(@navbarBackground, 5%);
 @navbarSearchBackgroundFocus:     @white;
 @navbarSearchBorder:              darken(@navbarSearchBackground, 30%);
 @navbarSearchPlaceholderColor:    #ccc;
-@navbarBrandColor:                @navbarLinkColor;
+@navbarBrandColor:                @white;
 
 
 // Hero unit
@@ -193,10 +193,10 @@
 // GRID
 // --------------------------------------------------
 
-// Default 940px grid
+// Default 988px grid
 // -------------------------
 @gridColumns:             12;
-@gridColumnWidth:         60px;
+@gridColumnWidth:         64px;
 @gridGutterWidth:         20px;
 @gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
 

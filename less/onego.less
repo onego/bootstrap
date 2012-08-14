@@ -1,0 +1,158 @@
+/* fonts */
+@font-face {
+    font-family: 'Droid Sans';
+    src: url('/commons/fonts/DroidSansPro.eot?#iefix') format('embedded-opentype'), url('/commons/fonts/DroidSansPro.woff') format('woff'), url('/commons/fonts/DroidSansPro.ttf') format('truetype'), url('/commons/fonts/DroidSansPro.svg#Droid Sans') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Droid Sans';
+    src: url('/commons/fonts/DroidSansPro.eot?#iefix') format('embedded-opentype'), url('/commons/fonts/DroidSansPro-Bold.woff') format('woff'), url('/commons/fonts/DroidSansPro-Bold.ttf') format('truetype'), url('/commons/fonts/DroidSansPro-Bold.svg#Droid Sans') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: OneGo;
+    src: url('/commons/fonts/onego-regular-webfont.eot');
+    src: url('/commons/fonts/onego-regular-webfont.eot?#iefix') format('embedded-opentype'), url('/commons/fonts/onego-regular-webfont.woff') format('woff'), url('/commons/fonts/onego-regular-webfont.ttf') format('truetype'), url('/commons/fonts/onego-regular-webfont.svg#ONEGORegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    height: 100%;
+	color: @black;
+}
+
+// reset auto width
+.container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+    max-width: 988px;
+}
+
+// navigation
+.caret {
+	.opacity(100)
+}
+
+.navbar .nav > li > a {
+	text-shadow: none;
+}
+
+.navbar .nav > li.dropdown > a {
+	.caret {
+		opasiti: 100;
+		border-top-color: @white;
+		border-bottom-color: @white;
+	}
+}
+
+.navbar .nav > li.dropdown {
+	border-right: 1px solid @black;
+}
+
+.navbar .nav > li.dropdown.open > a, .navbar .nav > li.dropdown:hover > a {
+ 	color: @orange;
+	.caret {
+		border-top-color: @orange;
+		border-bottom-color: @orange;
+	}
+ }
+
+.navbar .nav > li.dropdown.open {
+	background-color: @white;
+	border-right: 1px solid @white;
+	
+	form {
+		padding: 15px;
+		
+		input {
+			
+			max-width: 150px;
+		}
+		
+		span {
+			color: @black;
+			display: block;
+			padding-bottom: 15px;
+		}
+	}
+}
+
+
+.navbar {
+    margin-top: 15px;
+
+    .brand {
+        width: 100;
+        color: #fff;
+        font-family: OneGo;
+        background-color: #7FB003;
+        margin-left: 0;
+        padding: 10px 0;
+        padding-left: 10px;
+        padding-right: 20px;
+    }
+	
+	li {
+		a {
+			font-weight: bold;
+		}
+	}
+	
+    .dropdown-menu {
+		left: -204px;
+		border-top: none;
+		margin-top: 0;
+		margin-right: -2px;
+        min-width: 300px;
+        border-radius: 0;
+        padding: 0;
+		.box-shadow(0 0 2px lighten(@gray, 50%));
+		.transition(visibility 0s ease 0.1s);
+
+        li {
+            a {
+                padding: 10px 15px;
+
+                span {
+                    font-weight: normal;
+                    color: #A3A3A3;
+                }
+            }
+
+            a:hover {
+                span {
+                    color: #000;
+                }
+            }
+        }
+
+        .divider {
+            margin: 0;
+        }
+
+		.divider-double {
+			height: 3px;
+		}
+
+		&:after, &:before {
+			content: none;
+		}
+		
+    }
+}
+
+.breadcrumb {
+    font-size: 11px;
+    background: none;
+    border: none;
+    padding: 0;
+    li {
+        a {
+            color: #999;
+        }
+    }
+    li.active {
+        color: #FF6905;
+    }
+}
