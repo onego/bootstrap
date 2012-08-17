@@ -15,8 +15,9 @@
 @grayDark:              #9B9B9B;
 @gray:                  #A3A3A3;
 @grayLight:             #CBC7C7;
-@grayLighter:           #F4F4F4;
-@white:                 #fff;
+@grayLighter:           #D9D9D9;
+@grayVeryLight:         #EEEEEE;
+@white:                 #FFFFFF;
 
 
 // Accent colors
@@ -34,7 +35,7 @@
 // Scaffolding
 // -------------------------
 @bodyBackground:        @white;
-@textColor:             @grayDark;
+@textColor:             @black;
 
 
 // Links
@@ -54,8 +55,8 @@
 @baseLineHeight:        18px;
 @altFontFamily:         @serifFontFamily;
 
-@headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
-@headingsFontWeight:    bold;    // instead of browser default, bold
+@headingsFontFamily:    "Droid Sans", arial, sans-serif; // empty to use BS default, @baseFontFamily
+@headingsFontWeight:    normal;    // instead of browser default, bold
 @headingsColor:         inherit; // empty to use BS default, @textColor
 
 
@@ -95,7 +96,7 @@
 // Forms
 // -------------------------
 @inputBackground:               @white;
-@inputBorder:                   #ccc;
+@inputBorder:                   @gray;
 @inputBorderRadius:             3px;
 @inputDisabledBackground:       @grayLighter;
 @formActionsBackground:         #f5f5f5;
@@ -180,7 +181,7 @@
 @errorBackground:         #f2dede;
 @errorBorder:             darken(spin(@errorBackground, -10), 3%);
 
-@successText:             #468847;
+@successText:             #629B1F;
 @successBackground:       #dff0d8;
 @successBorder:           darken(spin(@successBackground, -10), 5%);
 

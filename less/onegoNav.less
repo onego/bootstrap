@@ -1,0 +1,150 @@
+// ONEGO NAVIGATION BAR
+// -----------
+
+@containerPrimaryBackgroundColor: @white;
+@containerSecondaryBackgroundColor: #EFEFEF;
+@borderColor: #CDCDCD;
+@linkHoverBackground: #EDEDED;
+@linkActivePrimaryBackgroundColor: @grayLight;
+@linkActiveSecondaryBackgroundColor: #FEFEFE;
+
+.linkBorder(@color: transparent) {
+    border-left: 1px solid @color;
+    border-right: 1px solid @color;
+}
+
+#navContainer {
+
+    ul {
+        display: block;
+        margin: 20px 0;
+        .gradientBar(@containerPrimaryBackgroundColor, @containerSecondaryBackgroundColor);
+        .border-radius(30px);
+        border: 1px solid @borderColor;
+        font-size: 16px;
+        text-transform: inherit;
+        .size(43px, 1024px);
+        left: -18px;
+        position: relative;
+
+        li {
+            min-width: 15%;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            .ie7-inline-block();
+            float: left;
+
+            a {
+                text-align: center;
+                padding: 12px 25px;
+                display: block;
+                color: @black;
+                text-decoration: none;
+                .linkBorder();
+                font-weight: normal;
+            }
+
+            a:hover {
+                background-color: @linkHoverBackground;
+                .linkBorder(@borderColor);
+            }
+
+            &.selected {
+                a,
+                a:hover {
+                    font-weight: bold;
+                    color: @orange;
+                    .gradientBar(@linkActivePrimaryBackgroundColor, @linkActiveSecondaryBackgroundColor);
+                    .linkBorder(@white);
+                }
+            }
+
+            &:first-child {
+                a {
+                    border-radius: 30px 0 0 30px;
+                }
+            }
+        }
+
+        &.step {
+            li.arrow {
+                display: inline-block;
+                min-width: 19px;
+                width: 19px;
+                height: 44px;
+                background: url("../img/).png") left top no-repeat;
+                z-index: 200;
+            }
+
+            li {
+                a,
+                a:hover {
+                    background: transparent;
+                    border: none;
+                    color: @successText;
+                    font-weight: bold;
+
+                    span {
+                        .border-radius(20px);
+                        font-size: 22px;
+                        font-weight: bold;
+                        width: 30px;
+                        height: 27px;
+                        margin: 0 10px 0 0;
+                        border: none;
+                        padding: 3px 10px;
+                        color: #ffffff;
+                        text-align: center;
+                        background-color: @successText;
+                    }
+                }
+
+                a:hover {
+                    text-decoration: underline;
+                }
+
+                &.selected {
+                    a,
+                    a:hover {
+                        background: transparent;
+                        border: none;
+                        color: @orange;
+
+                        span {
+                            background-color: @orange;
+                        }
+                    }
+                }
+
+                &.disabled {
+                    a,
+                    a:hover {
+                        text-decoration: none;
+                        background: transparent;
+                        border: none;
+                        color: @gray;
+                        cursor: default;
+
+                        span {
+                            background-color: @gray;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.step3 {
+            li {
+                width: 32%;
+            }
+        }
+
+        &.step4 {
+            li {
+                width: 23%;
+            }
+        }
+    }
+}
